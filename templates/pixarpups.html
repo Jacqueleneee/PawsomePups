@@ -1,0 +1,21 @@
+
+<!DOCTYPE html>
+<html>
+  <body>
+
+    <!-- Connect this to the LAYOUT HTML (navigation menu) -->
+    {% extends "layout.html" %}
+    {% block content %}
+
+  	<!-- Connect this to the LAYOUT HTML (navigation menu) -->
+    {% if not loggedin %}
+    <button class="pixarpups_button" onclick="window.location.href='signup'" >REGISTER </button>
+    <button class="pixarpups_button" onclick="window.location.href = 'login'"  >LOGIN </button>
+    {% endif %}
+
+    <img src="../static/images/logo.png" class="main_logo" >
+     	
+    {% endblock %}
+
+  </body>
+</html> 

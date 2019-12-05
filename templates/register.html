@@ -1,0 +1,46 @@
+
+<!DOCTYPE html>
+<html>
+
+  <body>
+
+    <!-- Connect this to the LAYOUT HTML (navigation menu) -->
+    {% extends "layout.html" %}
+    {% block content %}
+    <div class="pages">
+      <a href="/" class="previous round">&#8249;</a>
+      <h3 class="upload_form_title">Register Account Form</h3>
+
+
+      <div class="form_format">
+        <form method = "POST" action="/signup">
+          <label for="dname">Name *</label>
+          <input type="text" id="fname" name="name" placeholder="Full name.."><br>
+
+          <label for="lname">Email *</label>
+          <input type="text" id="lname" name="email" placeholder="Email.."><br>
+
+          <label for="lname">Password *</label>
+          <input type="password" id="lname" name="password" placeholder="Password">
+        
+          <input type="submit" value="Submit">
+        </form>
+
+          <p>
+            <span class="password_message">
+              <span>
+                {{error}}
+              </span>
+            </span>
+            <span class="success"> 
+              <span> {{ success }}  </span>
+            </span>
+          </p>
+
+      </div>
+    </div>
+
+   {% endblock %}
+
+  </body>
+</html> 

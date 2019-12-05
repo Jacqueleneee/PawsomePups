@@ -1,0 +1,34 @@
+<!--Flask looks for HTML template files in a folder called 'templates'-->
+
+
+<!DOCTYPE html>
+<html>
+  <body>
+
+  	<!-- Connect this to the LAYOUT HTML (navigation menu) -->
+  {% extends "layout.html" %}
+	{% block content %}
+   <div class="pages">
+   	<center>
+     <h1 class='title'> Hello <u>{{user_name}}</u>! Anything is Paw-sible!<img src="../static/images/pixar_ball.png" height=50> 
+     	<button class="upload_button" onclick="window.location.href='upload'" >UPLOAD
+     		<img src="../static/images/paw.svg" height=13 >
+     	</button>
+     </h1> 
+     
+     <p> Welcome! This is a website featuring dogs dressed as Pixar characters. Enjoy!</p>
+
+     <!-- Linking from home page to other dog pages -->
+     <div class="container_icon">
+     	<div class="content_icon">
+		     {% for dog in dogs %}
+          {% if dog.OWNER_ID == user_id %}
+		     	<a href='/dogs/{{dog.rowid}}'><img class="characters" src={{dog.BREED}}  width="300" height="300"></a> 
+          {% endif %}
+		     {% endfor %}
+		 </div>
+		</center>
+   	 </div>
+   {% endblock %}
+  </body>
+</html> 

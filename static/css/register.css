@@ -1,0 +1,175 @@
+/* CSS linked tp 'layout.html' */
+/******************************* NAVIGATION BAR AND LAYOUT *******************************/
+body {
+  margin: 0;
+  padding: 0;
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  color: #444;
+  height: auto;
+  min-height:100%;
+  background-color: #9FC8D1;
+}
+/*
+ * Formatting the header area
+ */
+header {
+  background-color: #0F7990;
+  height: 45px;
+  width: 100%;
+  opacity: .9;
+  margin-bottom: 0px;
+}
+header h1.logo {
+  margin: 5px;
+  font-size: 1.7em;
+  color: #fff;
+  text-transform: uppercase;
+  float: left;
+}
+header h1.logo:hover {
+  color: #fff;
+  text-decoration: none;
+}
+.title {
+  text-align: center;
+  margin-left: 20%
+}
+/*
+ * Centering the body content
+ */
+.container {
+  width: 1200px;
+  margin: 0 auto;
+}
+div.pages1 {
+  padding: 10px 0 0px 0;
+  
+  -webkit-border-radius: 6px;
+     -moz-border-radius: 6px;
+          border-radius: 6px;
+}
+h2 {
+  font-size: 3em;
+  margin-top: 40px;
+  text-align: center;
+  letter-spacing: -2px;
+}
+h3 {
+  font-size: 1.7em;
+  font-weight: bold;
+  font-weight: 100;
+  margin-top: 30px;
+  text-align: center;
+  letter-spacing: -1px;
+  color: black;
+}
+.main_logo {
+  display:block;
+  margin-left: 10%;
+  margin-right: auto;
+  width: 80%
+}
+
+.menu {
+  float: right;
+  margin-top: -25px;
+}
+.menu li {
+  display: inline;
+}
+.menu li + li {
+  margin-left: 35px;
+}
+.menu li a {
+  color: #fff;
+  text-decoration: none;
+}
+
+.menu-hover:hover {
+  color: #202020;
+}
+
+
+
+/******************************* REGISTRATION FORM *******************************/
+input[type=text], select {
+  width: 50%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+}
+input[type=password], select {
+  width: 50%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+}
+input[type=submit] {
+  width: 50%;
+  background-color: #4CAF50;
+  color: white;
+  padding: 14px 20px;
+  margin: 8px 0;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+input[type=submit]:hover {
+  background-color: #45a049;
+}
+.form_format {
+  align-content: left;
+  margin-left: 2%
+}
+.pixarpups_button {
+  margin: 10px;
+  float: right;
+  background-color:#ffa64d; 
+  color: white; 
+  font-size: 18px;
+  display: inline-block;
+  text-transform: uppercase;
+  text-decoration: none;
+  padding: 20px;
+  border-radius: 5px;
+  transition: all 0.4s ease 0s;
+}
+.pixarpups_button:hover {
+  letter-spacing: 1px;
+  -webkit-box-shadow: 0px 5px 40px -10px rgba(0,0,0,0.57);
+  -moz-box-shadow: 0px 5px 40px -10px rgba(0,0,0,0.57);
+  box-shadow: 5px 40px -10px rgba(0,0,0,0.57);
+  transition: all 0.4s ease 0s;
+}
+a {
+  text-decoration: none;
+  display: inline-block;
+  padding: 8px 16px;
+}
+a:hover {
+  color: black;
+}
+.previous {
+  background-color: #f1f1f1;
+  color: black;
+}
+.password_message span{
+  background-color:#ff8080;
+  border-style: solid;
+  border-color: #b30000;
+}
+.success span {
+  background-color: #A6F29D;
+  border-style: solid;
+  border-color: #27B916;
+}
+
+
+
+

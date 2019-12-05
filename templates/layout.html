@@ -1,0 +1,32 @@
+<!-- Parent HTML that generates header to each of our HTML files -->
+
+<!DOCTYPE html>
+<html>
+  <!--Link CSS to this page-->
+  <head>
+    <title>Pixar Puppies 🐾</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/main.css')}}" >
+  </head>
+  <body>
+    <header>
+      <div class="container">
+        <h1 class="logo"> Pixar Puppies </h1> <img class="paw" src="https://image.flaticon.com/icons/svg/194/194177.svg" height="30">
+        <strong><nav>
+          <ul class="menu">
+            {% if loggedin %}
+              <li><a class="menu-hover" href="{{ url_for('home') }}">Home</a></li>
+              <li><a class="menu-hover" href="{{ url_for('about') }}">About</a></li>
+              <li><a class="menu-hover" href="{{ url_for('logout') }}">Logout</a></li>
+            {% else %}
+              <li><a class="menu-hover" href="{{ url_for('about') }}">About</a></li>
+            {% endif %}
+          </ul>
+        </nav></strong>
+      </div>
+    </header>
+    <!--Link other HTML pages-->
+    <!-- Lines with curly brackets will be replaced on demand by other HTML cdde-->
+      {% block content %}
+      {% endblock %}
+  </body>
+</html>

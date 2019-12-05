@@ -1,0 +1,38 @@
+
+<!DOCTYPE html>
+<html>
+
+  <body>
+
+    <!-- Connect this to the LAYOUT HTML (navigation menu) -->
+    {% extends "layout.html" %}
+    {% block content %}
+    <div class="pages">
+      <a href="/" class="previous round">&#8249;</a>
+      <h3 class="upload_form_title">Login Form</h3>
+
+
+      <div class="form_format">
+        <form method = "POST" action="/login">
+          <label for="lname">Email *</label>
+          <input type="text" id="lname" name="email" placeholder="Email.."><br>
+
+          <label for="lname">Password *</label>
+          <input type="password" id="lname" name="password" placeholder="Password..">
+        
+          <input type="submit" value="Submit">
+        </form>
+        <p>
+          <span class="password_message">
+            <span>{{error}}</span>
+          </span>
+        </p>
+
+
+      </div>
+    </div>
+
+   {% endblock %}
+
+  </body>
+</html> 

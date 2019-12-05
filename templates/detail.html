@@ -1,0 +1,85 @@
+<!doctype html>
+
+<!--<button class="delete_button" type="submit" value="Delete">DELETE</button>-->
+<!--<button class="delete_button" type="button" data-toggle="modal" data-target="#myModal">DELETE</button>-->
+
+<html>
+
+  <head>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+  </head>
+  <body>
+      <!-- Connect this to the LAYOUT HTML -->
+      {% extends "layout.html" %}
+      {% block content %}
+      <div class="pages">
+        <a href="/home" class="previous round">&#8249;</a>
+        <div class="jumbotron_container">
+          <div class="container">
+            <br>
+            <p> <font size=10> Hi, my name is<span class="dog_name"><b> {{dog.NAME}}</b>.</span>  </font>
+              <button class="update_button" onclick="window.location.href = '/update/{{dog.rowid}}'">EDIT</button><br>
+              <button class="delete_button" type="button" value="Delete" data-toggle="modal" data-target="#myModal">DELETE</button>
+
+              <!-- BOOTSTRAP MODAL POP UP -->  
+              <!-- Modal -->
+              <div class="modal fade" id="myModal" role="dialog">
+                <div class="modal-dialog">
+                  <!-- Modal content-->
+                  <div class="modal-content">
+                    <div class="modal-header">
+                      <button type="button" class="close" data-dismiss="modal">&times;</button>
+                      <h4 class="modal-title">Are you sure you want to delete '{{dog.NAME}}'?</h4>
+                    </div>
+                    <div class="modal-body">
+                      <p>This item will be deleted immediately. You can't undo this action.</p>
+                    </div>
+                    <div class="modal-footer">
+                      <form method="POST" action="/dogs/delete">
+                        <input type="hidden" value= "{{dog.rowid}}" name="dog_id">
+                        <button type="submit" value="Delete" class="delete_button">Delete </button>
+                      </form>                     
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              
+            </p>
+            <br>
+            <center>
+              <p><span class="lead">Character: </span> {{dog.CHARACTER}}</p>
+              <p class="lead">{{ dog.ABOUT}}</p> 
+              <img src={{dog.PICTURELINK}} >
+             </center>
+          </div>
+        </div>      
+      </div>
+      <!-- BOOTSTRAP MODAL POP UP -->  
+      <!-- Modal -->
+
+
+      
+  </div>
+
+
+
+
+
+
+
+
+
+    
+    {% endblock %}
+
+
+
+    <!-- Bootstrap Core JS-->
+    <!-- ======================= -->
+
+    
+  </body>
+</html>

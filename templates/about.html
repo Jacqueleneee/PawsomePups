@@ -1,0 +1,59 @@
+
+
+<!DOCTYPE html>
+<html>
+  <body>
+
+  	<!-- Connect this to the LAYOUT HTML -->
+  	{% extends "layout.html" %}
+	{% block content %}
+	<a href="/home" class="previous round">&#8249;</a>
+   	<div class="about">
+
+   	
+     <p>A fun simple website made from FLASK! Here is are the technologies used to create this website:
+	     <br><br>
+	     <b><h1><center>TECHNOLOGIES:</h1></center></b><br>
+	     <span class="tech_title"> Flask </span><br>
+	     Flask is a framework that handles server requests for your app - provides tools, libraries, and other technologies. <br><br>
+
+	     <span class="tech_title"> Python Script </span> <br>
+	     Handles communication between webserver and the browser. <br><br>
+
+	     <span class="tech_title"> HTML </span> <br>
+	     Responsible for the structure of the page content. It is the <i><b>skeleton</b></i> <img src="https://cdn0.iconfinder.com/data/icons/medical-health-14/100/Skull-512.png" width=30> of the website.<br>
+	     - Stored in the 'templates' folder
+
+	     <br><br>
+
+	     <span class="tech_title"> CSS </span> <br>
+	     Responsible for the styling & formatting of the HTML. It is the <i><b>flesh</b></i> <img src="https://cdn0.iconfinder.com/data/icons/avatar-2/500/man-2-512.png" width=30> of the website.<br>
+	     - Stored in the 'static' folder
+	     <br><br>
+
+	     <span class="tech_title"> SQLite </span> <br>
+	     This will be our database system. We created a SQLite database from a CSV file - we used TablePlus to manage our data. <br><br>
+
+	     <span class="tech_title"> SQLAlchemy </span> <br>
+	     This is our database of info for the webpage. It is the <i><b>brain</b></i> <img src="http://pluspng.com/img-png/brain-png-brain-icon-png-image-2536-942.png" width=30>of the website.<br> 
+	     - We will use ORMs (Object-relational mapping): gods created that so that instead of writing SQL, you can write python and the ORM will talk to the data-base for you
+	     - Create classes that model the DB itself
+	     <br><br>
+
+	     <span class="tech_title"> JINJA2 </span> <br>
+	     It is a templating language.<br>
+	     <br><br>
+
+
+
+     </p>
+   </div>
+   {% endblock %}
+   <script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
+
+  </body>
+</html>
+
+
+
+

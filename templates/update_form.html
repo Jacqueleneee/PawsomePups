@@ -1,0 +1,41 @@
+
+<!DOCTYPE html>
+<html>
+  <body>
+
+  	<!-- Connect this to the LAYOUT HTML (navigation menu) -->
+  	{% extends "layout.html" %}
+	  {% block content %}
+    <div class="pages">
+      <h3 class="upload_form_title">Edit {{dog.CHARACTER}}</h3>
+      <div class="form_format">
+        <form method = "POST" action="/update/{{slug}}">
+          <label for="dname">Dog Name</label>
+          <input type="hidden" id="fname" name="dog_name_old" value="{{dog.NAME}}">
+          <input type="text" id="fname" name="dog_name_new" value="{{dog.NAME}}"><br>
+
+          <label for="lname">Character Name</label>
+          <input type="hidden" id="fname" name="dog_character_old" value="{{dog.CHARACTER}}">
+          <input type="text" id="lname" name="dog_character_new" value="{{dog.CHARACTER}}"><br>
+
+          <label for="lname">About Dog</label>
+          <input type="hidden" id="fname" name="dog_about_old" value="{{dog.ABOUT}}">
+          <input type="text" id="lname" name="dog_about_new" value="{{dog.ABOUT}}"><br>
+
+          <label for="lname">Home Icon Link</label>
+          <input type="hidden" id="fname" name="dog_icon_old" value="{{dog.BREED}}">
+          <input type="text" id="lname" name="dog_icon_new" value={{dog.BREED}}><br>
+
+          <label for="lname">About Dog Photo Link</label>
+          <input type="hidden" id="fname" name="dog_photo_old" value="{{dog.PICTURELINK}}">
+          <input type="text" id="lname" name="dog_photo_new" value={{dog.PICTURELINK}}><br>
+        
+          <input type="submit" value="Update">
+        </form>
+      </div>
+    </div>
+
+   {% endblock %}
+
+  </body>
+</html> 

@@ -1,0 +1,45 @@
+
+<!DOCTYPE html>
+<html>
+  <body>
+
+  	<!-- Connect this to the LAYOUT HTML (navigation menu) onsubmit="setTimeout(function(){window.location.reload();},1)" -->
+  	{% extends "layout.html" %}
+	  {% block content %}
+    <div class="pages">
+      <a href="/home" class="previous round">&#8249;</a>
+      <h3 class="upload_form_title">Add New Dog to Home Page</h3>
+
+      <div class="form_format">
+        <form method = "POST" action="/upload">
+          <label for="dname">Dog Name *</label>
+          <input type="text" id="fname" name="dog_name" placeholder="Dog name.."><br>
+
+          <label for="lname">Character Name</label>
+          <input type="text" id="lname" name="dog_character" placeholder="Character name.."><br>
+
+          <label for="lname">About Dog</label>
+          <input type="text" id="lname" name="dog_about" placeholder="Enter a small bio.."><br>
+
+          <label for="lname">Home Icon Link *</label>
+          <input type="text" id="lname" name="dog_icon" placeholder="URL of image.."><br>
+
+          <label for="lname">About Dog Photo Link</label>
+          <input type="text" id="lname" name="dog_photo" placeholder="URL of image.."><br>
+
+          <label for="origin">Origin</label>
+          <select id="origin" name="origin">
+            <option value="pixar">Pixar</option>
+            <option value="disney">Disney</option>
+            <option value="other">Other</option>
+          </select>
+          <input type="submit" value="Submit">
+        </form>
+
+      </div>
+    </div>
+
+   {% endblock %}
+
+  </body>
+</html> 
